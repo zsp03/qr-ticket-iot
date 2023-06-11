@@ -5,6 +5,7 @@
 3. Create your own database
 3. Make `.env` from `.env.example` and fill your database information and PUSHER variable, example:
 
+```
     PUSHER_APP_ID=qrticketiot
     PUSHER_APP_KEY=yourkey
     PUSHER_APP_SECRET=yoursecret
@@ -12,6 +13,7 @@
     PUSHER_PORT=6001
     PUSHER_SCHEME=http
     PUSHER_APP_CLUSTER=mt1
+```
 
 4. Run `php artisan migrate:fresh --seed`
 5. Run `npm run build`
