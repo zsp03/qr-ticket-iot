@@ -30,8 +30,8 @@ Route::get('/generate', function () {
     }
 });
 
-Route::get('/find/{id}', function ($id) {
-    $ticket = \App\Models\Ticket::where('code', $id)->firstOrFail();
+Route::get('/find/{code}', function ($code) {
+    $ticket = \App\Models\Ticket::where('code', $code)->firstOrFail();
     broadcast(new \App\Events\TestEvent($ticket));
     return $ticket;
 });
